@@ -1,4 +1,4 @@
--- Katana Hub Library v1
+-- Katana Hub Library v2
 pcall(function()
     game:GetService('CoreGui'):FindFirstChild('ui'):Remove()
 end)
