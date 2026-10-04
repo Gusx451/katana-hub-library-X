@@ -1,5 +1,3 @@
--- Katana hub library
-
 pcall(function()
     game:GetService('CoreGui'):FindFirstChild('ui'):Remove()
 end)
@@ -153,13 +151,13 @@ function Library:Window(title)
     MinimizedIcon.BackgroundTransparency = 0
     MinimizedIcon.BorderSizePixel = 0
     MinimizedIcon.Position = UDim2.new(1, -20, 1, -20)
-    MinimizedIcon.Size = UDim2.new(0, 40, 0, 40)
+    MinimizedIcon.Size = UDim2.new(0, 73, 0, 73)
     MinimizedIcon.Visible = false
     MinimizedIcon.ZIndex = 10
     MinimizedIcon.Image = "rbxassetid://10022633281"
     
     local MinimizedCorner = Instance.new("UICorner")
-    MinimizedCorner.CornerRadius = UDim.new(0, 8)
+    MinimizedCorner.CornerRadius = UDim.new(0, 12)
     MinimizedCorner.Parent = MinimizedIcon
     
     -- Make minimized icon draggable
