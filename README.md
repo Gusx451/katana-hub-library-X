@@ -152,7 +152,7 @@ function Library:Window(title)
     MinimizedIcon.BackgroundTransparency = 0
     MinimizedIcon.BorderSizePixel = 0
     MinimizedIcon.Position = UDim2.new(1, -20, 1, -20)
-    MinimizedIcon.Size = UDim2.new(0, 73, 0, 73)
+    MinimizedIcon.Size = UDim2.new(0, 50, 0, 50)
     MinimizedIcon.Visible = false
     MinimizedIcon.ZIndex = 10
     MinimizedIcon.Image = "rbxassetid://10022633281"
