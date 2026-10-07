@@ -26,7 +26,7 @@ function Library:Window(title)
     local Main = Instance.new("Frame")
     Main.Name = "Main"
     Main.Parent = ui
-    Main.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     Main.BorderSizePixel = 0
     Main.Position = UDim2.new(0.377, 0, 0.368, 0)
     Main.Size = UDim2.new(0, 470, 0, 283)
@@ -78,13 +78,13 @@ function Library:Window(title)
     Shadow.Name = "Shadow"
     Shadow.Parent = Main
     Shadow.AnchorPoint = Vector2.new(0.5, 0.5)
-    Shadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Shadow.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     Shadow.BackgroundTransparency = 1.000
     Shadow.Position = UDim2.new(0.5, 0, 0.5, 0)
     Shadow.Size = UDim2.new(1, 30, 1, 30)
     Shadow.ZIndex = 0
     Shadow.Image = "rbxassetid://5554236805"
-    Shadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+    Shadow.ImageColor3 = Color3.fromRGB(255, 0, 0)
     Shadow.ScaleType = Enum.ScaleType.Slice
     Shadow.SliceCenter = Rect.new(23, 23, 277, 277)
     
@@ -92,7 +92,7 @@ function Library:Window(title)
     local Top = Instance.new("Frame")
     Top.Name = "Top"
     Top.Parent = Main
-    Top.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+    Top.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     Top.BorderSizePixel = 0
     Top.Size = UDim2.new(1, 0, 0, 34)
     
@@ -104,7 +104,7 @@ function Library:Window(title)
     TopCover.Name = "Cover"
     TopCover.Parent = Top
     TopCover.AnchorPoint = Vector2.new(0.5, 1)
-    TopCover.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+    TopCover.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     TopCover.BorderSizePixel = 0
     TopCover.Position = UDim2.new(0.5, 0, 1, 0)
     TopCover.Size = UDim2.new(1, 0, 0, 4)
@@ -113,7 +113,7 @@ function Library:Window(title)
     Line.Name = "Line"
     Line.Parent = Top
     Line.AnchorPoint = Vector2.new(0.5, 1)
-    Line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Line.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     Line.BackgroundTransparency = 0.920
     Line.Position = UDim2.new(0.5, 0, 1, 1)
     Line.Size = UDim2.new(1, 0, 0, 1)
@@ -123,24 +123,24 @@ function Library:Window(title)
     Logo.Name = "Logo"
     Logo.Parent = Top
     Logo.AnchorPoint = Vector2.new(0, 0.5)
-    Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Logo.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     Logo.BackgroundTransparency = 1.000
     Logo.Position = UDim2.new(0, 4, 0.5, 0)
     Logo.Size = UDim2.new(0, 26, 0, 30)
     Logo.Image = "rbxassetid://10022633281"
-    Logo.ImageColor3 = Color3.fromRGB(255, 38, 38)
+    Logo.ImageColor3 = Color3.fromRGB(255, 0, 0)
     
     -- Minimize Button (using minus icon)
     local Minimize = Instance.new("ImageButton")
     Minimize.Name = "Minimize"
     Minimize.Parent = Top
     Minimize.AnchorPoint = Vector2.new(1, 0.5)
-    Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Minimize.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     Minimize.BackgroundTransparency = 1.000
     Minimize.Position = UDim2.new(1, -30, 0.5, 0)
     Minimize.Size = UDim2.new(0, 20, 0, 20)
     Minimize.Image = "rbxassetid://7733771811" -- Minus icon
-    Minimize.ImageColor3 = Color3.fromRGB(199, 199, 199)
+    Minimize.ImageColor3 = Color3.fromRGB(255, 0, 0)
     Minimize.ScaleType = Enum.ScaleType.Crop
     
     -- Minimized Icon (initially hidden)
@@ -148,7 +148,7 @@ function Library:Window(title)
     MinimizedIcon.Name = "MinimizedIcon"
     MinimizedIcon.Parent = ui
     MinimizedIcon.AnchorPoint = Vector2.new(1, 1)
-    MinimizedIcon.BackgroundColor3 = Color3.fromRGB(255, 38, 38)
+    MinimizedIcon.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     MinimizedIcon.BackgroundTransparency = 0
     MinimizedIcon.BorderSizePixel = 0
     MinimizedIcon.Position = UDim2.new(1, -20, 1, -20)
@@ -203,11 +203,11 @@ function Library:Window(title)
     end)
     
     Minimize.MouseEnter:Connect(function()
-        TweenService:Create(Minimize, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
+        TweenService:Create(Minimize, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(255, 0, 0)}):Play()
     end)
     
     Minimize.MouseLeave:Connect(function()
-        TweenService:Create(Minimize, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(166, 166, 166)}):Play()
+        TweenService:Create(Minimize, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(255, 0, 0)}):Play()
     end)
     
     -- Restore functionality
@@ -221,12 +221,12 @@ function Library:Window(title)
     Close.Name = "Close"
     Close.Parent = Top
     Close.AnchorPoint = Vector2.new(1, 0.5)
-    Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Close.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     Close.BackgroundTransparency = 1.000
     Close.Position = UDim2.new(1, -6, 0.5, 0)
     Close.Size = UDim2.new(0, 20, 0, 20)
     Close.Image = "http://www.roblox.com/asset/?id=7755372427"
-    Close.ImageColor3 = Color3.fromRGB(199, 199, 199)
+    Close.ImageColor3 = Color3.fromRGB(255, 0, 0)
     Close.ScaleType = Enum.ScaleType.Crop
     
     Close.MouseButton1Click:Connect(function()
@@ -234,11 +234,11 @@ function Library:Window(title)
     end)
     
     Close.MouseEnter:Connect(function()
-        TweenService:Create(Close, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
+        TweenService:Create(Close, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(255, 0, 0)}):Play()
     end)
     
     Close.MouseLeave:Connect(function()
-        TweenService:Create(Close, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(166, 166, 166)}):Play()
+        TweenService:Create(Close, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(255, 0, 0)}):Play()
     end)
     
     -- Title
@@ -246,13 +246,13 @@ function Library:Window(title)
     GameName.Name = "GameName"
     GameName.Parent = Top 
     GameName.AnchorPoint = Vector2.new(0, 0.5)
-    GameName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    GameName.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     GameName.BackgroundTransparency = 1.000
     GameName.Position = UDim2.new(0, 32, 0.5, 0)
     GameName.Size = UDim2.new(0, 165, 0, 22)
     GameName.Font = Enum.Font.Gotham
     GameName.Text = title or "Game Name"
-    GameName.TextColor3 = Color3.fromRGB(255, 38, 38)
+    GameName.TextColor3 = Color3.fromRGB(255, 0, 0)
     GameName.TextSize = 14.000
     GameName.TextXAlignment = Enum.TextXAlignment.Left
     
@@ -260,7 +260,7 @@ function Library:Window(title)
     local Tabs = Instance.new("Frame")
     Tabs.Name = "Tabs"
     Tabs.Parent = Main
-    Tabs.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+    Tabs.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     Tabs.BorderSizePixel = 0
     Tabs.Position = UDim2.new(0, 0, 0, 35)
     Tabs.Size = UDim2.new(0, 122, 1, -35)
@@ -273,7 +273,7 @@ function Library:Window(title)
     TabsCover.Name = "Cover"
     TabsCover.Parent = Tabs
     TabsCover.AnchorPoint = Vector2.new(1, 0.5)
-    TabsCover.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+    TabsCover.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     TabsCover.BorderSizePixel = 0
     TabsCover.Position = UDim2.new(1, 0, 0.5, 0)
     TabsCover.Size = UDim2.new(0, 5, 1, 0)
@@ -281,7 +281,7 @@ function Library:Window(title)
     local TabsContainer = Instance.new("Frame")
     TabsContainer.Name = "TabsContainer"
     TabsContainer.Parent = Tabs
-    TabsContainer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TabsContainer.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     TabsContainer.BackgroundTransparency = 1.000
     TabsContainer.Size = UDim2.new(1, 0, 1, 0)
     
@@ -300,7 +300,7 @@ function Library:Window(title)
     local Pages = Instance.new("Frame")
     Pages.Name = "Pages"
     Pages.Parent = Main
-    Pages.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    Pages.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     Pages.BorderSizePixel = 0
     Pages.Position = UDim2.new(0, 130, 0, 42)
     Pages.Size = UDim2.new(1, -138, 1, -50)
@@ -360,13 +360,13 @@ function Library:Window(title)
         local TabButton = Instance.new("TextButton")
         TabButton.Name = "TabButton"
         TabButton.Parent = TabsContainer
-        TabButton.BackgroundColor3 = Color3.fromRGB(255, 38, 38)
+        TabButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
         TabButton.BackgroundTransparency = 1
         TabButton.Size = UDim2.new(1, -12, 0, 30)
         TabButton.AutoButtonColor = false
         TabButton.Font = Enum.Font.Gotham
         TabButton.Text = ""
-        TabButton.TextColor3 = Color3.fromRGB(72,72,72)
+        TabButton.TextColor3 = Color3.fromRGB(255, 0, 0)
         TabButton.TextSize = 14.000
         
         local TabCorner = Instance.new("UICorner")
@@ -390,7 +390,7 @@ function Library:Window(title)
             Icon.Position = UDim2.new(0, 5, 0.5, -10)
             Icon.Size = UDim2.new(0, 20, 0, 20)
             Icon.Image = icon
-            Icon.ImageColor3 = Color3.fromRGB(255, 38, 38)
+            Icon.ImageColor3 = Color3.fromRGB(255, 0, 0)
         end
         
         -- Add text label
@@ -401,7 +401,7 @@ function Library:Window(title)
         TextLabel.Size = UDim2.new(1, 0, 1, 0)
         TextLabel.Font = Enum.Font.Gotham
         TextLabel.Text = title
-        TextLabel.TextColor3 = Color3.fromRGB(72,72,72)
+        TextLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
         TextLabel.TextSize = 14.000
         TextLabel.TextXAlignment = Enum.TextXAlignment.Center
         
@@ -417,7 +417,7 @@ function Library:Window(title)
         Page.Visible = false
         Page.Parent = Pages
         Page.Active = true
-        Page.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        Page.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
         Page.BackgroundTransparency = 1.000
         Page.BorderSizePixel = 0
         Page.Size = UDim2.new(1, 0, 1, 0)
@@ -452,20 +452,20 @@ function Library:Window(title)
                 if v.Name == 'TabButton' then
                     TweenService:Create(v, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 1}):Play()
                     if v:FindFirstChild("TabContent") and v.TabContent:FindFirstChild("TextLabel") then
-                        TweenService:Create(v.TabContent.TextLabel, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(72,72,72)}):Play()
+                        TweenService:Create(v.TabContent.TextLabel, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(255, 0, 0)}):Play()
                     end
                 end
             end
             
             TweenService:Create(TabButton, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 0.6}):Play()
-            TweenService:Create(TextLabel, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(255,255,255)}):Play()
+            TweenService:Create(TextLabel, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(255, 0, 0)}):Play()
         end)
         
         -- First tab should be selected by default
         if #TabsContainer:GetChildren() == 1 then
             Page.Visible = true
             TweenService:Create(TabButton, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 0.6}):Play()
-            TweenService:Create(TextLabel, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(255,255,255)}):Play()
+            TweenService:Create(TextLabel, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = Color3.fromRGB(255, 0, 0)}):Play()
         end
         
         -- Element functions
@@ -476,13 +476,13 @@ function Library:Window(title)
             local Button = Instance.new("TextButton")
             Button.Name = "Button"
             Button.Parent = Page
-            Button.BackgroundColor3 = Color3.fromRGB(120, 0, 0)
+            Button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Button.BorderSizePixel = 0
             Button.Size = UDim2.new(1, -6, 0, 34)
             Button.AutoButtonColor = false
             Button.Font = Enum.Font.Gotham
             Button.Text = text or "Button"
-            Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+            Button.TextColor3 = Color3.fromRGB(255, 0, 0)
             Button.TextSize = 14.000
             
             local ButtonCorner = Instance.new("UICorner")
@@ -490,11 +490,11 @@ function Library:Window(title)
             ButtonCorner.Parent = Button
             
             Button.MouseEnter:Connect(function()
-                TweenService:Create(Button, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(168, 0, 0)}):Play()
+                TweenService:Create(Button, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(0, 0, 0)}):Play()
             end)
             
             Button.MouseLeave:Connect(function()
-                TweenService:Create(Button, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(120, 0, 0)}):Play()
+                TweenService:Create(Button, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(0, 0, 0)}):Play()
             end)
             
             Button.MouseButton1Click:Connect(function()
@@ -512,13 +512,13 @@ function Library:Window(title)
             local Toggle = Instance.new("TextButton")
             Toggle.Name = "Toggle"
             Toggle.Parent = Page
-            Toggle.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+            Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Toggle.BorderSizePixel = 0
             Toggle.Size = UDim2.new(1, -6, 0, 34)
             Toggle.AutoButtonColor = false
             Toggle.Font = Enum.Font.SourceSans
             Toggle.Text = ""
-            Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+            Toggle.TextColor3 = Color3.fromRGB(255, 0, 0)
             Toggle.TextSize = 14.000
             
             local ToggleCorner = Instance.new("UICorner")
@@ -528,13 +528,13 @@ function Library:Window(title)
             local Title = Instance.new("TextLabel")
             Title.Name = "Title"
             Title.Parent = Toggle
-            Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Title.BackgroundTransparency = 1.000
             Title.Position = UDim2.new(0, 8, 0, 0)
             Title.Size = UDim2.new(1, -6, 1, 0)
             Title.Font = Enum.Font.Gotham
             Title.Text = text or "Toggle"
-            Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+            Title.TextColor3 = Color3.fromRGB(255, 0, 0)
             Title.TextSize = 14.000
             Title.TextXAlignment = Enum.TextXAlignment.Left
             
@@ -542,7 +542,7 @@ function Library:Window(title)
             ToggleFrame.Name = "ToggleFrame"
             ToggleFrame.Parent = Toggle
             ToggleFrame.AnchorPoint = Vector2.new(1, 0.5)
-            ToggleFrame.BackgroundColor3 = Color3.fromRGB(168, 0, 0)
+            ToggleFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             ToggleFrame.BackgroundTransparency = 1.000
             ToggleFrame.BorderSizePixel = 0
             ToggleFrame.Position = UDim2.new(1, -8, 0.5, 0)
@@ -555,7 +555,7 @@ function Library:Window(title)
             local Check = Instance.new("ImageLabel")
             Check.Name = "Check"
             Check.Parent = ToggleFrame
-            Check.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            Check.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Check.BackgroundTransparency = 1.000
             Check.Position = UDim2.new(0, -2, 0, -2)
             Check.Size = UDim2.new(0, 22, 0, 22)
@@ -567,7 +567,7 @@ function Library:Window(title)
             ToggleStroke.Parent = ToggleFrame
             ToggleStroke.LineJoinMode = Enum.LineJoinMode.Round
             ToggleStroke.Thickness = 2
-            ToggleStroke.Color = Color3.fromRGB(168, 0, 0)
+            ToggleStroke.Color = Color3.fromRGB(255, 0, 0)
             
             local toggled = default or false
             
@@ -577,11 +577,11 @@ function Library:Window(title)
             end
             
             Toggle.MouseEnter:Connect(function()
-                TweenService:Create(Toggle, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(40, 40, 40)}):Play()
+                TweenService:Create(Toggle, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(0, 0, 0)}):Play()
             end)
             
             Toggle.MouseLeave:Connect(function()
-                TweenService:Create(Toggle, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {BackgroundColor3 = Color3.fromRGB(35, 35, 35)}):Play()
+                TweenService:Create(Toggle, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {BackgroundColor3 = Color3.fromRGB(0, 0, 0)}):Play()
             end)
             
             Toggle.MouseButton1Click:Connect(function()
@@ -608,12 +608,12 @@ function Library:Window(title)
         function Elements:Label(text)
             local Label = Instance.new("TextLabel")
             Label.Parent = Page
-            Label.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+            Label.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Label.BorderSizePixel = 0
             Label.Size = UDim2.new(1, -6, 0, 34)
             Label.Font = Enum.Font.Gotham
             Label.Text = "  " .. (text or "Label")
-            Label.TextColor3 = Color3.fromRGB(255, 255, 255)
+            Label.TextColor3 = Color3.fromRGB(255, 0, 0)
             Label.TextSize = 14.000
             Label.TextXAlignment = Enum.TextXAlignment.Left
             
@@ -627,7 +627,7 @@ function Library:Window(title)
             local Slider = Instance.new("Frame")
             Slider.Name = "Slider"
             Slider.Parent = Page
-            Slider.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+            Slider.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Slider.Size = UDim2.new(1, -6, 0, 48)
             
             local SliderCorner = Instance.new("UICorner")
@@ -637,13 +637,13 @@ function Library:Window(title)
             local Title = Instance.new("TextLabel")
             Title.Name = "Title"
             Title.Parent = Slider
-            Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Title.BackgroundTransparency = 1.000
             Title.Position = UDim2.new(0, 8, 0, 0)
             Title.Size = UDim2.new(1, -6, 0, 34)
             Title.Font = Enum.Font.Gotham
             Title.Text = text or "Slider"
-            Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+            Title.TextColor3 = Color3.fromRGB(255, 0, 0)
             Title.TextSize = 14.000
             Title.TextXAlignment = Enum.TextXAlignment.Left
             
@@ -651,13 +651,13 @@ function Library:Window(title)
             Value.Name = "Value"
             Value.Parent = Slider
             Value.AnchorPoint = Vector2.new(1, 0)
-            Value.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            Value.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Value.BackgroundTransparency = 1.000
             Value.Position = UDim2.new(1, -10, 0, 0)
             Value.Size = UDim2.new(1, 0, 0, 34)
             Value.Font = Enum.Font.Gotham
             Value.Text = tostring(default)
-            Value.TextColor3 = Color3.fromRGB(255, 255, 255)
+            Value.TextColor3 = Color3.fromRGB(255, 0, 0)
             Value.TextSize = 14.000
             Value.TextXAlignment = Enum.TextXAlignment.Right
             
@@ -665,7 +665,7 @@ function Library:Window(title)
             SliderClick.Name = "SliderClick"
             SliderClick.Parent = Slider
             SliderClick.AnchorPoint = Vector2.new(0.5, 1)
-            SliderClick.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+            SliderClick.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             SliderClick.Position = UDim2.new(0.5, 0, 1, -8)
             SliderClick.Size = UDim2.new(1, -12, 0, 6)
             SliderClick.AutoButtonColor = false
@@ -678,7 +678,7 @@ function Library:Window(title)
             local SliderDrag = Instance.new("Frame")
             SliderDrag.Name = "SliderDrag"
             SliderDrag.Parent = SliderClick
-            SliderDrag.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+            SliderDrag.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             SliderDrag.Size = UDim2.new((default - min) / (max - min), 0, 1, 0)
             
             local SliderDragCorner = Instance.new("UICorner")
@@ -723,12 +723,12 @@ function Library:Window(title)
             local Keybind = Instance.new("TextButton")
             Keybind.Name = "Keybind"
             Keybind.Parent = Page
-            Keybind.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+            Keybind.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Keybind.Size = UDim2.new(1, -6, 0, 34)
             Keybind.AutoButtonColor = false
             Keybind.Font = Enum.Font.SourceSans
             Keybind.Text = ""
-            Keybind.TextColor3 = Color3.fromRGB(0, 0, 0)
+            Keybind.TextColor3 = Color3.fromRGB(255, 0, 0)
             Keybind.TextSize = 14.000
             
             local KeybindCorner = Instance.new("UICorner")
@@ -738,13 +738,13 @@ function Library:Window(title)
             local Title = Instance.new("TextLabel")
             Title.Name = "Title"
             Title.Parent = Keybind
-            Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Title.BackgroundTransparency = 1.000
             Title.Position = UDim2.new(0, 8, 0, 0)
             Title.Size = UDim2.new(1, -6, 1, 0)
             Title.Font = Enum.Font.Gotham
             Title.Text = text or "Keybind"
-            Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+            Title.TextColor3 = Color3.fromRGB(255, 0, 0)
             Title.TextSize = 14.000
             Title.TextXAlignment = Enum.TextXAlignment.Left
             
@@ -752,12 +752,12 @@ function Library:Window(title)
             CurrentKey.Name = "CurrentKey"
             CurrentKey.Parent = Keybind
             CurrentKey.AnchorPoint = Vector2.new(1, 0.5)
-            CurrentKey.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+            CurrentKey.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             CurrentKey.Position = UDim2.new(1, -6, 0.5, 0)
             CurrentKey.Size = UDim2.new(-0, 46, 0, 24)
             CurrentKey.Font = Enum.Font.Gotham
             CurrentKey.Text = defaultKey.Name or ". . ."
-            CurrentKey.TextColor3 = Color3.fromRGB(255, 255, 255)
+            CurrentKey.TextColor3 = Color3.fromRGB(255, 0, 0)
             CurrentKey.TextSize = 14.000
             
             local CurrentKeyCorner = Instance.new("UICorner")
@@ -799,7 +799,7 @@ function Library:Window(title)
             local InputBox = Instance.new("Frame")
             InputBox.Name = "InputBox"
             InputBox.Parent = Page
-            InputBox.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+            InputBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             InputBox.Size = UDim2.new(1, -6, 0, 48)
             
             local InputBoxCorner = Instance.new("UICorner")
@@ -809,27 +809,27 @@ function Library:Window(title)
             local Title = Instance.new("TextLabel")
             Title.Name = "Title"
             Title.Parent = InputBox
-            Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Title.BackgroundTransparency = 1.000
             Title.Position = UDim2.new(0, 8, 0, 0)
             Title.Size = UDim2.new(1, -6, 0, 20)
             Title.Font = Enum.Font.Gotham
             Title.Text = text or "Input"
-            Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+            Title.TextColor3 = Color3.fromRGB(255, 0, 0)
             Title.TextSize = 14.000
             Title.TextXAlignment = Enum.TextXAlignment.Left
             
             local Box = Instance.new("TextBox")
             Box.Name = "Box"
             Box.Parent = InputBox
-            Box.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+            Box.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Box.BorderSizePixel = 0
             Box.Position = UDim2.new(0, 8, 0, 24)
             Box.Size = UDim2.new(1, -16, 0, 20)
             Box.Font = Enum.Font.Gotham
             Box.PlaceholderText = placeholder or "Enter text..."
             Box.Text = ""
-            Box.TextColor3 = Color3.fromRGB(255, 255, 255)
+            Box.TextColor3 = Color3.fromRGB(255, 0, 0)
             Box.TextSize = 14.000
             
             local BoxCorner = Instance.new("UICorner")
@@ -857,7 +857,7 @@ function Library:Window(title)
             local Dropdown = Instance.new("Frame")
             Dropdown.Name = "Dropdown"
             Dropdown.Parent = Page
-            Dropdown.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            Dropdown.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Dropdown.BackgroundTransparency = 1.000
             Dropdown.BorderSizePixel = 0
             Dropdown.ClipsDescendants = true
@@ -872,7 +872,7 @@ function Library:Window(title)
             local Choose = Instance.new("Frame")
             Choose.Name = "Choose"
             Choose.Parent = Dropdown
-            Choose.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+            Choose.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Choose.BorderSizePixel = 0
             Choose.Size = UDim2.new(1, 0, 0, 34)
             
@@ -883,13 +883,13 @@ function Library:Window(title)
             local Title = Instance.new("TextLabel")
             Title.Name = "Title"
             Title.Parent = Choose
-            Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Title.BackgroundTransparency = 1.000
             Title.Position = UDim2.new(0, 8, 0, 0)
             Title.Size = UDim2.new(1, -6, 1, 0)
             Title.Font = Enum.Font.Gotham
             Title.Text = text or "Dropdown"
-            Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+            Title.TextColor3 = Color3.fromRGB(255, 0, 0)
             Title.TextSize = 14.000
             Title.TextXAlignment = Enum.TextXAlignment.Left
             
@@ -903,7 +903,7 @@ function Library:Window(title)
             Arrow.Size = UDim2.new(0, 28, 0, 28)
             Arrow.ZIndex = 2
             Arrow.Image = "rbxassetid://3926307971"
-            Arrow.ImageColor3 = Color3.fromRGB(168, 0, 0)
+            Arrow.ImageColor3 = Color3.fromRGB(255, 0, 0)
             Arrow.ImageRectOffset = Vector2.new(324, 524)
             Arrow.ImageRectSize = Vector2.new(36, 36)
             Arrow.ScaleType = Enum.ScaleType.Crop
@@ -911,7 +911,7 @@ function Library:Window(title)
             local OptionHolder = Instance.new("Frame")
             OptionHolder.Name = "OptionHolder"
             OptionHolder.Parent = Dropdown
-            OptionHolder.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+            OptionHolder.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             OptionHolder.BorderSizePixel = 0
             OptionHolder.Position = UDim2.new(0, 0, 0, 34)
             OptionHolder.Size = UDim2.new(1, 0, 0, 0)
@@ -958,13 +958,13 @@ function Library:Window(title)
                 local Option = Instance.new("TextButton")
                 Option.Name = "Option"
                 Option.Parent = OptionHolder
-                Option.BackgroundColor3 = Color3.fromRGB(120, 0, 0)
+                Option.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
                 Option.BorderSizePixel = 0
                 Option.Size = UDim2.new(1, -16, 0, 30)
                 Option.AutoButtonColor = false
                 Option.Font = Enum.Font.Gotham
                 Option.Text = option
-                Option.TextColor3 = Color3.fromRGB(255, 255, 255)
+                Option.TextColor3 = Color3.fromRGB(255, 0, 0)
                 Option.TextSize = 14.000
                 
                 local OptionCorner = Instance.new("UICorner")
@@ -1077,13 +1077,13 @@ function Library:Window(title)
                     local Option = Instance.new("TextButton")
                     Option.Name = "Option"
                     Option.Parent = OptionHolder
-                    Option.BackgroundColor3 = Color3.fromRGB(120, 0, 0)
+                    Option.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
                     Option.BorderSizePixel = 0
                     Option.Size = UDim2.new(1, -16, 0, 30)
                     Option.AutoButtonColor = false
                     Option.Font = Enum.Font.Gotham
                     Option.Text = option
-                    Option.TextColor3 = Color3.fromRGB(255, 255, 255)
+                    Option.TextColor3 = Color3.fromRGB(255, 0, 0)
                     Option.TextSize = 14.000
                     
                     local OptionCorner = Instance.new("UICorner")
