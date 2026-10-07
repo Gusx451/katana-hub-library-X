@@ -127,7 +127,7 @@ function Library:Window(title)
     Logo.BackgroundTransparency = 1.000
     Logo.Position = UDim2.new(0, 4, 0.5, 0)
     Logo.Size = UDim2.new(0, 26, 0, 30)
-    Logo.Image = "rbxassetid://10022633281"
+    Logo.Image = "rbxassetid://88995379969023"
     Logo.ImageColor3 = Color3.fromRGB(255, 0, 0)
     
     -- Minimize Button (using minus icon)
