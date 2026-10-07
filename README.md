@@ -128,7 +128,7 @@ function Library:Window(title)
     Logo.Position = UDim2.new(0, 4, 0.5, 0)
     Logo.Size = UDim2.new(0, 26, 0, 30)
     Logo.Image = "rbxassetid://10022633281"
-    Logo.ImageColor3 = Color3.fromRGB(176, 38, 255)
+    Logo.ImageColor3 = Color3.fromRGB(255, 38, 38)
     
     -- Minimize Button (using minus icon)
     local Minimize = Instance.new("ImageButton")
@@ -148,7 +148,7 @@ function Library:Window(title)
     MinimizedIcon.Name = "MinimizedIcon"
     MinimizedIcon.Parent = ui
     MinimizedIcon.AnchorPoint = Vector2.new(1, 1)
-    MinimizedIcon.BackgroundColor3 = Color3.fromRGB(176, 38, 255)
+    MinimizedIcon.BackgroundColor3 = Color3.fromRGB(255, 38, 38)
     MinimizedIcon.BackgroundTransparency = 0
     MinimizedIcon.BorderSizePixel = 0
     MinimizedIcon.Position = UDim2.new(1, -20, 1, -20)
@@ -252,7 +252,7 @@ function Library:Window(title)
     GameName.Size = UDim2.new(0, 165, 0, 22)
     GameName.Font = Enum.Font.Gotham
     GameName.Text = title or "Game Name"
-    GameName.TextColor3 = Color3.fromRGB(176, 38, 255)
+    GameName.TextColor3 = Color3.fromRGB(255, 38, 38)
     GameName.TextSize = 14.000
     GameName.TextXAlignment = Enum.TextXAlignment.Left
     
@@ -319,7 +319,7 @@ function Library:Window(title)
     Resize.Size = UDim2.new(0, 16, 0, 16)
     Resize.ZIndex = 2
     Resize.Image = "rbxassetid://3926307971"
-    Resize.ImageColor3 = Color3.fromRGB(126, 0, 255)
+    Resize.ImageColor3 = Color3.fromRGB(255, 0, 0)
     Resize.ImageRectOffset = Vector2.new(204, 364)
     Resize.ImageRectSize = Vector2.new(36, 36)
     
@@ -360,7 +360,7 @@ function Library:Window(title)
         local TabButton = Instance.new("TextButton")
         TabButton.Name = "TabButton"
         TabButton.Parent = TabsContainer
-        TabButton.BackgroundColor3 = Color3.fromRGB(176, 38, 255)
+        TabButton.BackgroundColor3 = Color3.fromRGB(255, 38, 38)
         TabButton.BackgroundTransparency = 1
         TabButton.Size = UDim2.new(1, -12, 0, 30)
         TabButton.AutoButtonColor = false
@@ -390,7 +390,7 @@ function Library:Window(title)
             Icon.Position = UDim2.new(0, 5, 0.5, -10)
             Icon.Size = UDim2.new(0, 20, 0, 20)
             Icon.Image = icon
-            Icon.ImageColor3 = Color3.fromRGB(176, 38, 255)
+            Icon.ImageColor3 = Color3.fromRGB(255, 38, 38)
         end
         
         -- Add text label
@@ -423,7 +423,7 @@ function Library:Window(title)
         Page.Size = UDim2.new(1, 0, 1, 0)
         Page.CanvasPosition = Vector2.new(0, 0)
         Page.ScrollBarThickness = 2
-        Page.ScrollBarImageColor3 = Color3.fromRGB(192, 0, 255)
+        Page.ScrollBarImageColor3 = Color3.fromRGB(255, 0, 0)
         
         local PageList = Instance.new("UIListLayout")
         PageList.Parent = Page
@@ -476,7 +476,7 @@ function Library:Window(title)
             local Button = Instance.new("TextButton")
             Button.Name = "Button"
             Button.Parent = Page
-            Button.BackgroundColor3 = Color3.fromRGB(78, 0, 120)
+            Button.BackgroundColor3 = Color3.fromRGB(120, 0, 0)
             Button.BorderSizePixel = 0
             Button.Size = UDim2.new(1, -6, 0, 34)
             Button.AutoButtonColor = false
@@ -490,11 +490,11 @@ function Library:Window(title)
             ButtonCorner.Parent = Button
             
             Button.MouseEnter:Connect(function()
-                TweenService:Create(Button, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(112, 0, 168)}):Play()
+                TweenService:Create(Button, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(168, 0, 0)}):Play()
             end)
             
             Button.MouseLeave:Connect(function()
-                TweenService:Create(Button, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(78, 0, 120)}):Play()
+                TweenService:Create(Button, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = Color3.fromRGB(120, 0, 0)}):Play()
             end)
             
             Button.MouseButton1Click:Connect(function()
@@ -542,7 +542,7 @@ function Library:Window(title)
             ToggleFrame.Name = "ToggleFrame"
             ToggleFrame.Parent = Toggle
             ToggleFrame.AnchorPoint = Vector2.new(1, 0.5)
-            ToggleFrame.BackgroundColor3 = Color3.fromRGB(112, 0, 168)
+            ToggleFrame.BackgroundColor3 = Color3.fromRGB(168, 0, 0)
             ToggleFrame.BackgroundTransparency = 1.000
             ToggleFrame.BorderSizePixel = 0
             ToggleFrame.Position = UDim2.new(1, -8, 0.5, 0)
@@ -567,7 +567,7 @@ function Library:Window(title)
             ToggleStroke.Parent = ToggleFrame
             ToggleStroke.LineJoinMode = Enum.LineJoinMode.Round
             ToggleStroke.Thickness = 2
-            ToggleStroke.Color = Color3.fromRGB(112, 0, 168)
+            ToggleStroke.Color = Color3.fromRGB(168, 0, 0)
             
             local toggled = default or false
             
@@ -678,7 +678,7 @@ function Library:Window(title)
             local SliderDrag = Instance.new("Frame")
             SliderDrag.Name = "SliderDrag"
             SliderDrag.Parent = SliderClick
-            SliderDrag.BackgroundColor3 = Color3.fromRGB(176, 0, 255)
+            SliderDrag.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
             SliderDrag.Size = UDim2.new((default - min) / (max - min), 0, 1, 0)
             
             local SliderDragCorner = Instance.new("UICorner")
@@ -903,7 +903,7 @@ function Library:Window(title)
             Arrow.Size = UDim2.new(0, 28, 0, 28)
             Arrow.ZIndex = 2
             Arrow.Image = "rbxassetid://3926307971"
-            Arrow.ImageColor3 = Color3.fromRGB(112, 0, 168)
+            Arrow.ImageColor3 = Color3.fromRGB(168, 0, 0)
             Arrow.ImageRectOffset = Vector2.new(324, 524)
             Arrow.ImageRectSize = Vector2.new(36, 36)
             Arrow.ScaleType = Enum.ScaleType.Crop
@@ -958,7 +958,7 @@ function Library:Window(title)
                 local Option = Instance.new("TextButton")
                 Option.Name = "Option"
                 Option.Parent = OptionHolder
-                Option.BackgroundColor3 = Color3.fromRGB(78, 0, 120)
+                Option.BackgroundColor3 = Color3.fromRGB(120, 0, 0)
                 Option.BorderSizePixel = 0
                 Option.Size = UDim2.new(1, -16, 0, 30)
                 Option.AutoButtonColor = false
@@ -1077,7 +1077,7 @@ function Library:Window(title)
                     local Option = Instance.new("TextButton")
                     Option.Name = "Option"
                     Option.Parent = OptionHolder
-                    Option.BackgroundColor3 = Color3.fromRGB(78, 0, 120)
+                    Option.BackgroundColor3 = Color3.fromRGB(120, 0, 0)
                     Option.BorderSizePixel = 0
                     Option.Size = UDim2.new(1, -16, 0, 30)
                     Option.AutoButtonColor = false
